@@ -1,0 +1,111 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 2rem;
+  background: #f0f4f8; /* light background */
+  color: #001f3f;
+  gap: 2rem;
+}
+
+/* Profile Image */
+.hero img {
+  width: 380px;   /* large & balanced */
+  height: 380px;
+  object-fit: cover;
+  border-radius: 50%; /* makes it a perfect circle */
+  border: 6px solid #fff; /* subtle border for separation */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* soft professional shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero img:hover {
+  transform: scale(1.05); /* slight zoom on hover */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Text */
+.hero-text {
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.hero p {
+  max-width: 700px;
+  line-height: 1.9;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.highlight {
+  color: #001f3f;
+  font-weight: bold;
+}
+
+/* Buttons */
+.hero-buttons {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cta-btn,
+.download-btn {
+  background: #001f3f;
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.cta-btn:hover,
+.download-btn:hover {
+  background: #003366;
+  transform: translateY(-3px);
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    gap: 5rem;
+    padding: 4rem 2rem;
+    align-items: center;
+  }
+
+  .hero img {
+    width: 420px;   /* larger on desktop */
+    height: 420px;
+  }
+
+  .hero h1 {
+    font-size: 3.6rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+}

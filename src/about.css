@@ -1,0 +1,140 @@
+/* Shared Section Styles */
+.about,
+.contact,
+.footer {
+  background: #001f3f; /* Same navy background */
+  color: #f8f9fa;
+  text-align: center;
+  margin: 0;
+  padding: 3rem 1.5rem;
+}
+
+/* About Section */
+.about h2 {
+  color: #ffffff;
+  font-size: 3.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.about h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #00bfff;
+  margin: 0.5rem auto 0 auto;
+  border-radius: 2px;
+}
+
+.about p {
+  font-size: 2.2rem;
+  line-height: 1.7;
+  max-width: 750px;
+  margin: 0 auto;
+  color: #d9d9d9;
+  text-align: justify;
+}
+
+/* Contact Section */
+.contact {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.contact h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: #00bcd4;
+}
+
+.contact-info {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.6;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Default: center on mobile */
+  gap: 1rem;
+}
+
+.contact-details {
+  text-align: left; /* Align left on larger screens */
+  width: 100%;
+}
+
+.contact-info p {
+  margin: 0.4rem 0;
+}
+
+.social-links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00bcd4;
+  color: #001f3f;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  background-color: #ffffff;
+  color: #001f3f;
+  transform: translateY(-5px);
+}
+
+/* Footer Section */
+.footer {
+  background-color: #001f3f;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer p {
+  margin: 0;
+  color: #e0e0e0;
+  letter-spacing: 0.4px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .about {
+    padding: 5rem 6rem;
+  }
+
+  .about p {
+    font-size: 1.1rem;
+  }
+
+  .contact-info {
+    flex-direction: row; /* Side by side on desktop */
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .contact-details {
+    flex: 1;
+  }
+
+  .social-links {
+    flex: 1;
+    justify-content: flex-end;
+  }
+}
